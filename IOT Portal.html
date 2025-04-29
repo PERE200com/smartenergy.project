@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Energy Meter Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+        }
+        nav {
+            background-color: #1e3c72;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #1e3c72;
+            border-bottom: 2px solid #dcdcdc;
+            padding-bottom: 10px;
+        }
+        .info {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .button {
+            background-color: #1e88e5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #1565c0;
+        }
+        .progress-container {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            height: 25px;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 10px;
+            width: 0%;
+            text-align: center;
+            color: white;
+            line-height: 25px;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+        .chart-placeholder {
+            height: 200px;
+            background: #f8f8f8;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    Smart Energy Meter Portal
+</nav>
+
+<div class="container">
+
+    <div class="section">
+        <h2>🔌 Real-Time Consumption</h2>
+        <p class="info">Current Usage: <strong><span id="usage">--</span> kWh</strong></p>
+        <p class="info">Status: <span id="status">Waiting for data...</span></p>
+        <div class="progress-container">
+            <div class="progress-bar" id="usageBar">0%</div>
+        </div>
+        <button class="button" onclick="simulateData()">Update Reading</button>
+    </div>
+
+    <div class="section">
+        <h2>💰 Billing Information</h2>
+        <p class="info">Current Month's Bill: <strong>KES <span id="bill">0.00</span></strong></p>
+        <p class="info">Due Date: <strong>28/04/2025</strong></p>
+        <p class="info">You'll receive alerts via SMS and Email</p>
+    </div>
+
+    <div class="section">
+        <h2>⚠ Theft Detection</h2>
+        <p class="alert" id="alertBox">No suspicious activity detected.</p>
+    </div>
+
+    <div class="section">
+        <h2>🕹 Remote Control</h2>
+        <p class="info">Main Power Status: <strong id="powerStatus">ON</strong></p>
+        <button class="button" onclick="togglePower()">Toggle Power</button>
+    </div>
+
+    <div class="section">
+        <h2>📊 Energy Analytics (Coming Soon)</h2>
+        <div class="chart-placeholder">Chart Area - Coming Soon!</div>
+    </div>
+
+</div>
+
+<script>
+    let powerOn = true;
+
+    function simulateData() {
+        const usage = (Math.random() * 5 + 1).toFixed(2);
+        const bill = (usage * 25).toFixed(2);
+        const usagePercent = Math.min((usage / 10) * 100, 100).toFixed(0);
+
+        document.getElementById('usage').textContent = usage;
+        document.getElementById('bill').textContent = bill;
+        document.getElementById('status').textContent = 'Updated at ' + new Date().toLocaleTimeString();
+
+        const bar = document.getElementById('usageBar');
+        bar.style.width = usagePercent + '%';
+        bar.textContent = usagePercent + '%';
+
+        if (usage > 6) {
+            document.getElementById('alertBox').textContent = '⚠ ALERT: Possible energy theft detected!';
+            document.getElementById('alertBox').style.color = 'red';
+        } else {
+            document.getElementById('alertBox').textContent = 'No suspicious activity detected.';
+            document.getElementById('alertBox').style.color = 'green';
+        }
+    }
+    function togglePower() {
+        powerOn = !powerOn;
+        document.getElementById('powerStatus').textContent = powerOn ? 'ON' : 'OFF';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prepaid – Smart Energy Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f9fc;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      min-height: 80vh;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .card h2 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      margin: 0.8rem 0;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    input[type="number"], select {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      background-color: #27ae60;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #219150;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.3rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem;
+      }
+
+      .menu-toggle {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="menu-toggle">☰ Menu</button>
+  <header>
+    <h1>Prepaid Top‑Up</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Top‑Up Your Credit</h2>
+      <p>Enter amount (KES):</p>
+      <input type="number" placeholder="e.g. 500" id="amount">
+      
+      <label for="method2">Payment Method:</label>
+      <select id="method2">
+        <option value="mpesa">M‑PESA</option>
+        <option value="card">Credit/Debit Card</option>
+        <option value="bank">Bank Transfer</option>
+      </select>
+
+      <a class="btn" href="#">Top‑Up Now</a>
+      <p style="margin-top:1rem;">Tokens delivered instantly via SMS/email.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Home – Smart Energy Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      color: #333;
+    }
+
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .menu-toggle {
+      background: #007acc;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 10px 15px;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card.hero {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+    }
+
+    .hero-gallery {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+
+    .hero-gallery img {
+      height: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #007acc;
+      margin-top: 0;
+    }
+
+    .features h3 {
+      margin-top: 25px;
+      color: #444;
+    }
+
+    .features ul {
+      padding-left: 20px;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .call-to-action {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 768px) {
+      .hero-gallery {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="menu-toggle">☰ Menu</button>
+
+  <header>
+    <h1>Smart Energy Meter Portal</h1>
+    <p>Real‑time Monitoring | Postpaid & Prepaid Options | Theft Detection | Reports</p>
+  </header>
+
+  <div class="container">
+    <div class="card hero">
+      <div class="hero-gallery">
+        <img src="images/smart-meter1.jpg" alt="Smart Energy Meter">
+        <img src="images/iot-dashboard.jpg" alt="IoT Dashboard">
+        <img src="images/theft-detection.jpg" alt="Theft Detection System">
+      </div>
+
+      <h2>Welcome to Your IoT-Enabled Smart Energy Meter Portal</h2>
+      <p>Step into the future of energy monitoring with our advanced IoT Smart Energy Meter platform. Designed with a clean, modern student-portal style, this system provides everything you need to monitor, manage, and optimize energy usage—securely and efficiently.</p>
+
+      <div class="features">
+        <h3>Why Choose Our Smart Energy Meter?</h3>
+        <ul>
+          <li><strong>Live Monitoring:</strong> Track electricity consumption in real time across devices and timelines.</li>
+          <li><strong>Theft Detection:</strong> Advanced algorithms detect unusual consumption patterns and tampering attempts instantly.</li>
+          <li><strong>Flexible Billing:</strong> Choose between prepaid or postpaid plans. Recharge credit instantly or view detailed invoices.</li>
+          <li><strong>Mobile & Web Access:</strong> Access your energy data from anywhere—mobile responsive interface included.</li>
+          <li><strong>Historical Data & Reports:</strong> Generate usage graphs, download reports, and get consumption insights at a glance.</li>
+          <li><strong>Remote Management:</strong> Admins can remotely disconnect/reconnect supply or investigate theft warnings.</li>
+        </ul>
+      </div>
+
+      <div class="call-to-action">
+        <p>All these features are wrapped into a responsive, user‑friendly interface tailored for both individual users and utility managers.</p>
+        <a class="btn" href="dashboard.html">Access Your Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

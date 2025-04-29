@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – Smart Energy Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f7f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      width: 100%;
+      max-width: 600px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
+    }
+
+    .card h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      margin: 0.6rem 0;
+      font-size: 1.1rem;
+    }
+
+    .card span {
+      font-weight: bold;
+    }
+
+    .status {
+      font-weight: bold;
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+    }
+
+    .status.connected {
+      color: #27ae60;
+      background-color: #eafaf1;
+    }
+
+    .status.disconnected {
+      color: #c0392b;
+      background-color: #fdecea;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+
+      .card {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="menu-toggle">☰ Menu</button>
+  <header>
+    <h1>Smart Energy Portal – Dashboard</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Current Status</h2>
+      <p><strong>Energy Consumed:</strong> <span>456.78 kWh</span></p>
+      <p><strong>Current Bill:</strong> <span>KES 3,650.00</span></p>
+      <p><strong>Status:</strong> <span class="status connected">Connected</span></p>
+      <p><strong>Last Updated:</strong> <span>April 15, 2025 – 09:42 AM</span></p>
+      <hr style="margin: 1.5rem 0;">
+      <p><strong>Usage Tip:</strong> Turn off unused appliances to reduce your monthly bill.</p>
+      <p><strong>Peak Hours:</strong> 6 PM – 9 PM</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

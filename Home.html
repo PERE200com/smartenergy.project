@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Energy Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://source.unsplash.com/1600x900/?technology,energy') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      background: rgba(10, 61, 98, 0.8);
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+
+    header p {
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 15px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #1e5f99;
+      border-radius: 5px;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .wrapper {
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero h2 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1e90ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #63b3ed;
+    }
+
+    .container2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border-radius: 15px;
+      padding: 20px;
+      background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+      color: white;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Smart Energy Meter Portal</h1>
+    <p>Real‑time Monitoring | Postpaid & Prepaid Options | Reports</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="HI.html">Home</a></li>
+      <li><a href="Dashboard.html">Dashboard</a></li>
+      <li><a href="Postpaid.html">Postpaid</a></li>
+      <li><a href="Pre paid.html">Prepaid</a></li>
+      <li><a href="Report.html">Reports</a></li>
+      <li><a href="Feedback.html">Meter Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="C:\Users\Hp\OneDrive\Documents\IT PROJECT\WhatsApp Image 2025-04-16 at 12.41.41_a69404d8.jpg" alt="Smart Grid">
+    </div>
+    <div class="slide">
+      <img src="C:\Users\Hp\OneDrive\Documents\IT PROJECT\WhatsApp Image 2025-04-16 at 12.41.41_f4710b84.jpg" alt="Energy Monitoring">
+    </div>
+    <div class="slide">
+      <img src="C:\Users\Hp\OneDrive\Documents\IT PROJECT\WhatsApp Image 2025-04-16 at 12.41.42_73b8f621.jpg" alt="IoT Energy">
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="hero">
+      <h2>Welcome to Your Energy Portal</h2>
+      <p>Kericho Smart Grid Solutions combines innovation with efficiency. Monitor electricity use in real-time, enjoy full transparency, and take control of your energy consumption whether at home, work, or on the go.</p>
+      <a class="btn" href="dashboard.html">Go to Dashboard</a>
+    </div>
+
+    <div class="container2">
+      <div class="card">
+        <img src="C:\Users\Hp\OneDrive\Pictures\Camera Roll\download.jpeg" alt="Remote Monitoring">
+        <h3>Remote Monitoring</h3>
+        <p>Monitor and acquire meter readings from power lines and water systems from a central console.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\Hp\OneDrive\Pictures\Camera Roll\download.jpeg" alt="Energy Metering">
+        <h3>Energy Metering</h3>
+        <p>Accurately measure consumption and enable efficient demand planning with smart metering tools.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\Hp\OneDrive\Pictures\Camera Roll\download.jpeg" alt="Maintenance">
+        <h3>Predictive Maintenance</h3>
+        <p>Detect and address maintenance issues before they become costly or dangerous.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\Hp\OneDrive\Pictures\Camera Roll\download.jpeg" alt="Analytics">
+        <h3>Reporting & Analytics</h3>
+        <p>Generate insightful reports and analyze trends to make informed energy decisions.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+  </script>
+
+</body>
+</html>
